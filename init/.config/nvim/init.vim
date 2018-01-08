@@ -1,3 +1,4 @@
+colorscheme elflord
 set clipboard=unnamedplus
 
 set wrap
@@ -30,7 +31,7 @@ if has("autocmd")
 	\endif
 endif
 "incsearch
-map / <Plug>(incsearch-forward)
+"map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <plug>(incsearrch-stay)
 "" complete

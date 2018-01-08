@@ -1,0 +1,12 @@
+[user]
+	email = sakakendo0321@gmail.com
+	name = sakakendo
+	editer = vim
+[core]
+	editor = vim
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = simple
