@@ -1,6 +1,8 @@
 function get_pkg(){
 	sudo apt-get update && sudo apt-get upgrade
 	sudo apt-get install libncurses5-dev libncursesw5-dev xclip nmap cmake automake lsof
+	#tex-live
+	sudo apt-add-repository ppa:texlive-backports/ppa;sudo apt-get install texlive-lang-cjk
 }
 
 #install fish
@@ -90,7 +92,7 @@ function main(){
 			install_neovim
 		elif [[ $func = "fish" ]] ; then
 			echo "***install fish***"
-			install_neovim
+			install_fish
 		elif [[ $func = "pkg" ]] ; then
 			echo "***install pkg***"
 			get_pkg

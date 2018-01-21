@@ -30,7 +30,7 @@ if has("autocmd")
 	\endif
 endif
 "incsearch
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <plug>(incsearrch-stay)
+"map / <Plug>(incsearch-forward)
+"map ? <Plug>(incsearch-backward)
+"map g/ <plug>(incsearrch-stay)
 "" complete
