@@ -1,8 +1,6 @@
 function get_pkg(){
 	sudo apt-get update && sudo apt-get upgrade
 	sudo apt-get install libncurses5-dev libncursesw5-dev xclip nmap cmake automake lsof
-	#tex-live
-	sudo apt-add-repository ppa:texlive-backports/ppa;sudo apt-get install texlive-lang-cjk
 }
 
 #install fish
