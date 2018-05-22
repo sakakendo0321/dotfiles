@@ -19,6 +19,7 @@ inoremap <silent>jj <Esc>
 nnoremap j gj
 nnoremap k gk
 set whichwrap=b,s,h,l,<,>,[,],~
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 "let loaded_matchpattern=1
 "set showmatch
 "set matchtime=1
@@ -48,18 +49,24 @@ if dein#load_state('/home/sakakendo0321/.cache/dein')
 	call dein#add('Shougo/neosnippet.vim')
 	call dein#add('Shougo/neosnippet-snippets')
 	call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+"	call dein#add('Valloric/YouCompleteMe')
+"colorscheme
 	call dein#add('tomasr/molokai')
-"	call dein#add('bling/vim-airline')
-	call dein#add('vim-airline/vim-airline')
+"powerline
+	call dein#add('bling/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
 "	call dein#add('Lokaltog/powerline',{'rtp':'powerline/bindings/vim/'})
+"syntax
+	call dein#add('vim-syntastic/syntastic')
+	call dein#add('nvie/vim-flake8')
+"complete
+	call dein#add('Shougo/deoplete.nvim')
+	call dein#add('zchee/deoplete-jedi')
+
+	call dein#add('Shougo/vimproc.vim',{'build':'make'})
 	call dein#end()
 	call dein#save_state()
 endif
-
-filetype plugin indent on
-syntax enable
-
 if dein#check_install()
   call dein#install()
 endif
@@ -72,3 +79,13 @@ set t_Co=256
 let g:airline_powerline_fonts=1
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts=1
+"syntax 
+let python_highlight_all=1
+"complete
+let g:deoplete#enable_at_startup=1
+"jedi
+
+filetype plugin indent on
+syntax enable
+
+
