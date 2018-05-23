@@ -62,8 +62,12 @@ if dein#load_state('/home/sakakendo0321/.cache/dein')
 "complete
 	call dein#add('Shougo/deoplete.nvim')
 	call dein#add('zchee/deoplete-jedi')
+	call dein#add('jiangmiao/auto-pairs')
 
+"quick run
 	call dein#add('Shougo/vimproc.vim',{'build':'make'})
+	call dein#add('thinca/vim-quickrun')
+
 	call dein#end()
 	call dein#save_state()
 endif
@@ -79,13 +83,33 @@ set t_Co=256
 let g:airline_powerline_fonts=1
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=0
+
 "syntax 
 let python_highlight_all=1
 "complete
 let g:deoplete#enable_at_startup=1
 "jedi
 
+
+"quickrun
+let g:quickrun_config={
+	\'_':{
+		\ 'runner' : 'vimproc',
+		\ 'runner/vimproc/updatetime' : 40,
+		\ 'outputter' : 'error' ,
+		\ 'outputter/error/success' : 'buffer',
+		\ 'outputter/error/error' : 'quickfix',
+		\ 'outputter/buffer/split' : ':botright 8sp',
+	\}
+\}
+let g:quickrun_no_defaullt_key_mappings=1
+"nmap <Leader>r :cclose<CR>:write<CR>:QuickRun -mode n<CR>
+nmap <F5> :cclose<CR>:write<CR>:QuickRun -mode n<CR>
+
+
 filetype plugin indent on
 syntax enable
+
 
 
