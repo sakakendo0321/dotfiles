@@ -11,6 +11,7 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
 fisher update ; fisher ls-remote;fisher ls
 #echo "set -U fish_user_path /user/local/bin " >>  $HOME/.config/fish/config.fish 
 fisher install z 0rax/fish-bd oh-my-fish/plugin-balias gitignore 
+curl https://raw.githubusercontent.com/fish-shell/fish-shell/master/share/completions/node.fish >>~/.config/fish/completions/node.fish
 #fish_config&
 
 #neovim
