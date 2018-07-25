@@ -24,19 +24,6 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 "set showmatch
 "set matchtime=1
 
-"save cursolposition
-if has("autocmd")
-	autocmd BufReadPost *
-	\ if line("'\"") > 0 && line("'\"")<=line("$")|
-	\	exe "normal! g'\""|
-	\endif
-endif
-"incsearch
-"map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <plug>(incsearrch-stay)
-"" complete
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -57,6 +44,12 @@ if dein#load_state('/Users/sakakendo/.cache/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
 
+  call dein#add('bling/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+
+  call dein#add('jiangmiao/auto-pairs')
+  
+
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
 
@@ -75,13 +68,27 @@ syntax enable
 "endif
 
 "End dein Scripts-------------------------
+"save cursolposition
+if has("autocmd")
+	autocmd BufReadPost *
+	\ if line("'\"") > 0 && line("'\"")<=line("$")|
+	\	exe "normal! g'\""|
+	\endif
+endif
+"incsearch
+"map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <plug>(incsearrch-stay)
+"" complete
+
+
 "color scheme
-colorscheme molokai
+"colorscheme molokai
 set t_Co=256
 
 "airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='molokai'
+let g:airline_theme='papercolor'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=0
 
