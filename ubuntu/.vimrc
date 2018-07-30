@@ -49,7 +49,6 @@ endif
 
 set runtimepath+=/home/sakak/.cache/dein/repos/github.com/Shougo/dein.vim
 
-
 if dein#load_state('/home/sakak/.cache/dein')
   call dein#begin('/home/sakak/.cache/dein')
 
@@ -59,6 +58,13 @@ if dein#load_state('/home/sakak/.cache/dein')
   call dein#add('Shougo/neosnippet-snippets')
 
   call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+	  call dein#add('roxma/nvim-yarp')
+	  call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  call dein#add('airblade/vim-gitgutter')
+
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('alvan/vim-closetag')
 
@@ -77,6 +83,14 @@ if dein#check_install()
 endif
 
 
+"deoplete.nvim
+let g:deoplete#enable_at_startup=1
+inoremap <expr><tab> pumvisible() ? "<c-n>" : "\<tab>"
+inoremap <expr><S-tab> pumvisible() ? "<c-p>" : "\<tab>"
+
+"vim-gitgutter
+
+
 "auto-pairs
 let g:AutoPairsFlyMode=1
 
@@ -93,6 +107,4 @@ set noshowmode
 let g:lightline={
 	\'colorscheme':'wombat',
 	\ }
-
-
 
