@@ -38,4 +38,61 @@ if has("autocmd")
 	\endif
 endif
 
-"colorscheme elflord
+"plugin
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+if &compatible
+  set nocompatible               
+endif
+
+set runtimepath+=/home/sakak/.cache/dein/repos/github.com/Shougo/dein.vim
+
+
+if dein#load_state('/home/sakak/.cache/dein')
+  call dein#begin('/home/sakak/.cache/dein')
+
+  call dein#add('/home/sakak/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+
+  call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
+  call dein#add('jiangmiao/auto-pairs')
+  call dein#add('alvan/vim-closetag')
+
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('itchyny/lightline.vim')
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+  call dein#install()
+endif
+
+
+"auto-pairs
+let g:AutoPairsFlyMode=1
+
+" vim-closetag
+
+"vim-colors-solarized
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
+"lightline
+set laststatus=2
+set noshowmode
+let g:lightline={
+	\'colorscheme':'wombat',
+	\ }
+
+
+
