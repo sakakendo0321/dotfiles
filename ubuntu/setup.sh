@@ -1,3 +1,6 @@
+#! bash
+
+
 [[ ! -e ~/.bashrc ]] && ln -isv ~/dotfiles/raspberry/.bashrc ~/.bashrc
 [[ ! -e ~/.vimrc  ]] && ln -isv ~/dotfiles/raspberry/.vimrc ~/.vimrc
 [[ ! -e ~/.gitconfig ]] && ln -isv ~/dotfiles/raspberry/.gitconfig ~/.gitconfig
@@ -17,6 +20,10 @@ fish --version
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher bobthefish balias bass extract getopts gitignore nvm peco spin thefuck z
 nvm install --lts && nvm use --lts
+
+#instal vim plugin
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+bash ./installer.sh ~/.cache/dein
 
 #python packages
 pip3 install -r requirements.txt
