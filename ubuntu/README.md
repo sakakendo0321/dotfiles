@@ -14,6 +14,7 @@ fisherman
 ### links
 https://github.com/bnb/awesome-hyper
 https://github.com/fisherman/awesome-fish-shell
+```
 VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Apr 10 2018 21:31:58)
 Included patches: 1-1453
 Modified by pkg-vim-maintainers@lists.alioth.debian.org
@@ -58,3 +59,4 @@ Huge version without GUI.  Features included (+) or not (-):
   fall-back for $VIM: "/usr/share/vim"
 Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H   -Wdate-time  -g -O2 -fdebug-prefix-map=/build/vim-NQEcoP/vim-8.0.1453=. -fstack-protector-strong -Wformat -Werror=format-security -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1       
 Linking: gcc   -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o vim        -lm -ltinfo -lnsl  -lselinux  -lacl -lattr -lgpm -ldl     -L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -lpython3.6m -lpthread -ldl -lutil -lm      
+```
